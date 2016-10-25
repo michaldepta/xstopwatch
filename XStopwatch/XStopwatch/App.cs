@@ -6,12 +6,12 @@ namespace XStopwatch
     {
         public override void Initialize()
         {
-            CreatableTypes()
-                .EndingWith("Service")
-                .AsInterfaces()
+            var x = CreatableTypes()
+                .EndingWith("Service");
+            x.AsInterfaces()
                 .RegisterAsLazySingleton();
 
-            RegisterAppStart<ViewModels.FirstViewModel>();
+            RegisterAppStart<ViewModels.StopwatchViewModel>();
         }
     }
 }
