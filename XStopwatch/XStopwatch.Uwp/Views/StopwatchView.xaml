@@ -25,15 +25,25 @@
                        FontSize="60"
                        Text="{Binding Path=Elapsed}"/>
         </Grid>
-        <Grid Grid.Row="1">
+        <StackPanel Grid.Row="1"
+                    VerticalAlignment="Center">
             <Button HorizontalAlignment="Stretch"
-                    Margin="20 0"
+                    Margin="20 20"
                     Padding="10"
                     Foreground="White"
                     FontSize="40"
                     Content="{Binding Path=StartStopOption}"
                     BorderBrush="White"
                     Command="{Binding Path=StartStop}"/>
-        </Grid>
+            
+            <Button HorizontalAlignment="Stretch"
+                    Margin="20 0"
+                    Padding="10"
+                    Foreground="White"
+                    FontSize="40"
+                    Content="Clear"
+                    BorderBrush="White"
+                    Command="{Binding Path=Clear}"/>
+        </StackPanel>
     </Grid>
 </views:MvxWindowsPage>
