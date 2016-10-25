@@ -34,6 +34,7 @@ namespace XStopwatch.ViewModels
         private void OnStartStop()
         {
             Elapsed= "ABCDE";
+            StartStopOption = StopText;
         }
     }
 }

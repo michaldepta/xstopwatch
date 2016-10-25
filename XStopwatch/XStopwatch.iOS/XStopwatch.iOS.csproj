@@ -97,6 +97,7 @@
   <ItemGroup>
     <ProjectReference Include="..\XStopwatch\XStopwatch.csproj">
       <Name>XStopwatch</Name>
+      <Project>{764FB313-B9F4-4EF5-9C9C-A34DBDDB72C7}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -164,7 +165,7 @@
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
     <None Include="packages.config" />
-    <InterfaceDefinition Include="Views\FirstView.xib" />
+    <InterfaceDefinition Include="Views\StopwatchView.xib" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DebugTrace.cs" />
@@ -172,11 +173,8 @@
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Setup.cs" />
-    <Compile Include="Views\FirstView.cs" />
-    <Compile Include="Views\FirstView.designer.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="AppDelegate.cs.txt" />
+    <Compile Include="Views\StopwatchView.cs" />
+    <Compile Include="Views\StopwatchView.designer.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

@@ -11,26 +11,27 @@ using UIKit;
 
 namespace XStopwatch.iOS.Views
 {
-    [Register ("FirstView")]
-    partial class FirstView
+    [Register ("StopwatchView")]
+    partial class StopwatchView
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UILabel Label { get; set; }
+        UIKit.UIButton StartStop { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UITextField TextField { get; set; }
+        UIKit.UILabel TimeElapsed { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
-            if (Label != null) {
-                Label.Dispose ();
-                Label = null;
+            if (StartStop != null) {
+                StartStop.Dispose ();
+                StartStop = null;
             }
-            if (TextField != null) {
-                TextField.Dispose ();
-                TextField = null;
+
+            if (TimeElapsed != null) {
+                TimeElapsed.Dispose ();
+                TimeElapsed = null;
             }
         }
     }
