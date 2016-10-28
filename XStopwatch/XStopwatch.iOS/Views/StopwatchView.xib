@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StopwatchView">
             <connections>
+                <outlet property="Clear" destination="aLc-SG-VXv" id="QFO-2N-cev"/>
                 <outlet property="StartStop" destination="17" id="name-outlet-17"/>
                 <outlet property="TimeElapsed" destination="5" id="name-outlet-5"/>
                 <outlet property="view" destination="2" id="RRd-Eg-VrN"/>
@@ -25,9 +27,16 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="17">
-                    <frame key="frameInset" minX="10" minY="581" width="355" height="60"/>
+                    <frame key="frameInset" minX="10" minY="498" width="355" height="60"/>
                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                     <state key="normal" title="Start">
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aLc-SG-VXv">
+                    <frame key="frameInset" minX="10" minY="577" width="355" height="60"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    <state key="normal" title="Clear">
                         <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                 </button>
@@ -36,11 +45,14 @@
             <constraints>
                 <constraint firstItem="5" firstAttribute="centerX" secondItem="2" secondAttribute="centerX" id="7"/>
                 <constraint firstAttribute="trailing" secondItem="17" secondAttribute="trailing" constant="10" id="A4I-tT-Y4b"/>
+                <constraint firstItem="aLc-SG-VXv" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="10" id="Crj-5l-qP5"/>
+                <constraint firstAttribute="trailing" secondItem="aLc-SG-VXv" secondAttribute="trailing" constant="10" id="DdP-ES-zRm"/>
                 <constraint firstItem="17" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="10" id="FU4-YN-ZED"/>
-                <constraint firstAttribute="bottom" secondItem="17" secondAttribute="bottom" constant="26" id="R8t-ti-25q"/>
                 <constraint firstItem="17" firstAttribute="centerX" secondItem="2" secondAttribute="centerX" id="d8R-jf-8CG"/>
                 <constraint firstItem="5" firstAttribute="centerY" secondItem="2" secondAttribute="centerY" id="fWd-fw-CzN"/>
+                <constraint firstAttribute="bottom" secondItem="aLc-SG-VXv" secondAttribute="bottom" constant="30" id="oyt-ru-MQx"/>
                 <constraint firstItem="5" firstAttribute="width" secondItem="2" secondAttribute="width" id="slE-lS-Sqa"/>
+                <constraint firstItem="aLc-SG-VXv" firstAttribute="top" secondItem="17" secondAttribute="bottom" constant="19" id="udx-OO-vpM"/>
             </constraints>
             <point key="canvasLocation" x="128.5" y="54.5"/>
         </view>

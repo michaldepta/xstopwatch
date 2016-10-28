@@ -17,8 +17,9 @@ namespace XStopwatch.iOS.Views
             var set = this.CreateBindingSet<StopwatchView, StopwatchViewModel>();
             set.Bind(TimeElapsed).To(vm => vm.Elapsed).Apply();
             set.Bind(StartStop).For("Title").To(vm => vm.StartStopOption);
-
+            
             StartStop.TouchUpInside += (sender, e) => ViewModel.StartStop.Execute();
+            Clear.TouchUpInside += (sender, e) => ViewModel.Clear.Execute();
 
             set.Apply();
         }
